@@ -35,6 +35,9 @@ pedido em linguagem natural
   padrão ReAct do LangGraph) com essas tools e um modelo da Groq.
 - **`cli.py`** — interface de linha de comando pra conversar com o
   agente, mantendo o histórico da conversa entre pedidos.
+- **`web.py`** + **`static/index.html`** — versão web (chat), pra ver o
+  agente funcionando sem precisar de terminal: mostra em tempo real cada
+  ferramenta que ele chama e o resultado dela, além da resposta final.
 
 ## Exemplo real (rodado contra um mytek-hub local)
 
@@ -66,8 +69,17 @@ passo o que chamar.
 2. ```bash
    cp .env.example .env   # preencha GROQ_API_KEY, MYTEK_HUB_MCP_URL, MYTEK_HUB_MCP_TOKEN
    pip install -r requirements.txt
-   python cli.py
+   python cli.py       # versão terminal
+   # ou
+   uvicorn web:app --reload   # versão web, em http://localhost:8000
    ```
+
+## Deploy
+
+Publicado no Render a partir de `render.yaml`. Variáveis necessárias:
+`GROQ_API_KEY`, `MYTEK_HUB_MCP_URL` (a URL `/api/mcp` do mytek-hub em
+produção) e `MYTEK_HUB_MCP_TOKEN` (um token pessoal gerado em `/conta/ia`
+no mytek-hub publicado).
 
 ## Testes
 
