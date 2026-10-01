@@ -1,5 +1,7 @@
 # agente-now-organiza
 
+**[🔗 Ver funcionando ao vivo](https://agente-now-organiza.onrender.com)** — abre no navegador, sem instalar nada. (Plano gratuito: a primeira mensagem pode demorar uns 30-50s pra "acordar" o servidor.)
+
 Agente autônomo (LangGraph) que opera o **Now Organiza** — o sistema de
 tarefas do [mytek-hub](https://github.com/myttrindade/mytek-hub) — a
 partir de um pedido em linguagem natural, decidindo sozinho quais
