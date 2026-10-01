@@ -83,6 +83,8 @@ Publicado no Render a partir de `render.yaml`. Variáveis necessárias:
 produção) e `MYTEK_HUB_MCP_TOKEN` (um token pessoal gerado em `/conta/ia`
 no mytek-hub publicado).
 
+**Por que o plano gratuito do Render:** este é um projeto de portfólio/demonstração, não uma carga de produção com tráfego real — então não há motivo pra manter uma instância paga rodando 24/7 só pra ficar disponível. A escolha é intencional: o plano free é suficiente pra provar a arquitetura e deixar o projeto testável por qualquer pessoa, sem gerar custo recorrente. O único efeito colateral é a instância "dormir" após um tempo sem uso — a primeira mensagem depois disso demora uns 30-50 segundos pra responder (o servidor acordando), e depois volta ao normal. Não é um bug, é a opção certa de custo/benefício pra esse estágio do projeto; migrar pra um plano sempre-ativo é só trocar o plano no Render quando fizer sentido.
+
 ## Testes
 
 ```bash
